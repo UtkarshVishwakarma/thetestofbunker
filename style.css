@@ -1,0 +1,188 @@
+:root {
+    --pop-up: 0, 0, 0;
+}
+body {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#map-container {
+    height: calc(100vh - 1px);
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#search-bar {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#locate-button,
+#emergency-button {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+
+#emergency-button:hover {
+    background: #cc0000;
+}
+
+#locate-button {
+    top: 10px;
+    right: 20px;
+}
+
+#emergency-button {
+    bottom: 20px;
+    left: 20px;
+    background-color: #ff0000;
+}
+
+.tit {
+    font-size: 2rem;
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+    margin-top: 20vh;
+}
+
+.input-con {
+    margin: 1rem;
+}
+
+.inputbox {
+    width: 100%;
+    padding: 10px;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.btn {
+    background: #007bff;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+#locate-button:hover, .btn:hover, #search-button:hover {
+    background: #0056b3;
+}
+#search-button {
+    background: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: medium;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#bunker-search {
+    padding: 5px 8px;
+    outline: none;
+    border: 1px soild #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens (e.g., tablets and mobile phones) */
+    #map-container {
+        height: calc(100vh - 50px); /* Adjust height to accommodate other elements */
+    } 
+  #locate-button,
+    #emergency-button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 12px; /* Adjust button padding */
+    }
+
+    /* Additional media queries and adjustments as needed */
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjustments for smaller screens (e.g., mobile phones) */
+    #map-container {
+        height: calc(100vh - 100px); /* Adjust height to accommodate other elements */
+    }
+
+    /* Additional media queries and adjustments as needed */
+}
+
+        /* Popup styles */
+        .popup {
+    position: fixed;
+    bottom: 20px; /* Position at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px; /* Adjust padding */
+    border-radius: 5px;
+    z-index: 9999;
+    display: none;
+    font-size: 16   px; /* Adjust font size */
+}
+
+    /* Adjustments for smaller screens */
+    @media screen and (max-width: 768px) {
+        .popup {
+            font-size: 12px; /* Adjust font size for smaller screens */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .popup {
+            font-size: 10px; /* Further adjust font size for smaller screens */
+        }
+    }

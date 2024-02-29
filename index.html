@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>India Map with Nearest Bunker Locator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/535/535137.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ID verification modal -->
+    <div id="id-verification-modal" class="modal" style="display: block;">
+        <div class="modal-content">
+            <h2 class="tit">ID Verification</h2>
+            <!-- ID verification form -->
+            <form id="id-verification-form">
+                <div class="input-con">
+                    <input class="inputbox" type="text" id="username" name="username" placeholder="Aadhar Name" required>
+                </div>
+                <div class="input-con">
+                    <input class="inputbox" type="password" id="password" name="password" placeholder="Adhar Number" required>
+                </div>
+                <div class="btn-box">
+                    <button class="btn" type="submit">Verify</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map container -->
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <!-- Search bar -->
+    <div id="search-bar">
+        <input type="text" id="bunker-search" placeholder="Search for a bunker...">
+        <button id="search-button">Search</button>
+    </div>
+
+    <!-- Locate Nearest Bunker button -->
+    <button id="locate-button" style="display: none;">Locate Nearest Bunker</button>
+
+    <!-- Call Emergency Service button -->
+    <button id="emergency-button" style="display: none;">Call Emergency Service</button>
+
+    <!-- Popup for messages -->
+    <div id="popup" class="popup"></div>
+
+    <!-- Leaflet and Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
